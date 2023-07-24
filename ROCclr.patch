@@ -1,0 +1,22 @@
+diff --git a/platform/agent.cpp b/platform/agent.cpp
+index cc7b107a..82d2c321 100644
+--- a/platform/agent.cpp
++++ b/platform/agent.cpp
+@@ -218,6 +218,7 @@ static int32_t CL_API_CALL GetVersionNumber(vdi_agent* agent, int32_t* version_r
+   *version_ret = VDI_AGENT_VERSION_1_0;
+   return CL_SUCCESS;
+ }
++auto gvn = GetVersionNumber;
+ 
+ static int32_t CL_API_CALL GetPlatform(vdi_agent* agent, cl_platform_id* platform_id_ret) {
+   if (platform_id_ret == NULL) {
+@@ -276,7 +277,7 @@ static int32_t CL_API_CALL SetICDDispatchTable(vdi_agent* agent, const cl_icd_di
+ 
+ }  // namespace agent
+ 
+-const vdi_agent Agent::entryPoints_ = {agent::GetVersionNumber,
++const vdi_agent Agent::entryPoints_ = {agent::gvn,
+                                 agent::GetPlatform,
+                                 agent::GetTime,
+                                 agent::SetCallbacks,
+
