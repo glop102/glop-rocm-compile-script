@@ -13,4 +13,5 @@ Steps:
 
 
 To use the enviroment once built, then add it to your path, eg 
-> PATH=/opt/rocm/bin:/opt/rocm/llvm/bin:/opt/rocm/hip:$PATH LD_LIBRARY_PATH=/opt/rocm/lib:$LD_LIBRARY_PATH
+> export PATH=/opt/rocm/bin:/opt/rocm/llvm/bin:/opt/rocm/hip:$PATH
+> export LD_LIBRARY_PATH=/opt/rocm/lib:$LD_LIBRARY_PATH
