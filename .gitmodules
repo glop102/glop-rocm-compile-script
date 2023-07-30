@@ -1,0 +1,3 @@
+[submodule "rocm/.repo/manifests"]
+	path = rocm/.repo/manifests
+	url = https://github.com/RadeonOpenCompute/ROCm.git
